@@ -62,6 +62,15 @@ p {
     justify-content: center;
 }
 
+.containerblocks {
+    margin: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .header {
     font-family: "inter";
     color: rgb(0, 0, 0);
@@ -78,4 +87,18 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: scale(1.05);
     transition: transform 0.3s ease;
+}
+
+.filterbutton {
+    background-color: rgb(255, 221, 180);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
 }
