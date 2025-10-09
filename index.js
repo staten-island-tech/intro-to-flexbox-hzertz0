@@ -1,7 +1,7 @@
 const blocks = [
   { name: "Bedrock", amount: 1, image: "Assets/bedrock.png", price: 3.141592653589793, type: "Overworld"},
-  { name: "Bookshelf", amount: 1, image: "Assets/bookshelf.png", price: 1 },
-  { name: "Diamond Block", amount: 1, image: "Assets/diamondblock.png", price: 4,},
+  { name: "Bookshelf", amount: 1, image: "Assets/bookshelf.png", price: 1, type: "Craftable" },
+  { name: "Diamond Block", amount: 1, image: "Assets/diamondblock.png", price: 4, type: "Craftable"},
   { name: "Netherrack", amount: 64, image: "Assets/netherrack.png", price: 1, type: "Nether" },
   { name: "Obsidian", amount: 2, image: "Assets/obsidian.png", price: 1, type: "Overworld" },
   { name: "Cobbled Deepslate", amount: 64, image: "Assets/cobbledeep.png", price: 1, type: "Overworld" },
