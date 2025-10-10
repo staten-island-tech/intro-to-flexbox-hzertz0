@@ -26,4 +26,14 @@ blocks.forEach((block) => {
         </div>`
   );
 });
+function filter() {
+  const buttons = document.querySelectorAll("filterbutton");
+  const btnArr = Array.from(buttons);
+  console.log(btnArr)
+}
+
+filter()
+
+
+
 

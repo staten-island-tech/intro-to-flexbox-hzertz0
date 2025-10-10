@@ -102,3 +102,11 @@ p {
     cursor: pointer;
     border-radius: 12px;
 }
+
+.footer {
+    padding: 10px;
+    position: fixed;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+}

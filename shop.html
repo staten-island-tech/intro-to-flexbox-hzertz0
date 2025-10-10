@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,13 +27,17 @@
 
     <div class="container">
       <button class="filterbutton">All Blocks</button>
-      <button class="filterbutton">Overworld Blocks</button>
-      <button class="filterbutton">Nether Blocks</button>
-      <button class="filterbutton">End Blocks</button>
-      <button class="filterbutton">Craftable Blocks</button>
+      <a class="filterbutton" data-category="overworld">Overworld Blocks</a>
+      <a class="filterbutton" data-category="nether">Nether Blocks</a>
+      <a class="filterbutton" data-category="end">End Blocks</a>
+      <a class="filterbutton" data-category="craftable">Craftable Blocks</a>
     </div>
 
     <div class="containerblocks">
+    </div>
+
+    <div class ="footer">
+      <img src="assets/chestcart.png" />
     </div>
 
     <script src="index.js"></script>
