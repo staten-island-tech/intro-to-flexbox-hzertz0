@@ -23,16 +23,24 @@ blocks.forEach((block) => {
             <img src="${block.image}" />
             <p>Price: ${block.price} Emerald</p>
             <p>Amount: ${block.amount}</p>
+            <button class="add-to-cart" data-name="${block.name}">Add to Cart</button>
         </div>`
   );
 });
-function filter() {
-  const buttons = document.querySelectorAll("filterbutton");
-  const btnArr = Array.from(buttons);
-  console.log(btnArr)
-}
 
-filter()
+const cart = [];
+
+document.addEventListener("click", function (click) {
+  if (click.target.classList.contains("add-to-cart")) {
+    const cartName = click.target.dataset.name;
+    const blockData = blocks.find(b => b.name === cartName);
+
+    if (blockData) {
+      cart.push(blockData)
+      console.log(cart)
+    }
+  }
+})
 
 
 
