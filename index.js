@@ -113,7 +113,7 @@ blocks.forEach((block) => {
 });
 
 const cart = [];
-
+let total = 0
 document.addEventListener("click", function (click) {
   if (click.target.classList.contains("add-to-cart")) {
     const cartName = click.target.dataset.name;
@@ -128,7 +128,9 @@ document.addEventListener("click", function (click) {
     
     document.querySelector(".total-price").insertAdjacentHTML(
       "afterbegin", `
-      <h3>Total Price: ${cart.reduce((total, block) => total + block.price, 0)} Emerald</h3>
+      <h3>${
+        total = total + blockData.price
+      }</h3>
       `);
   }
 });
