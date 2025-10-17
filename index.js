@@ -121,7 +121,6 @@ document.addEventListener("click", function (click) {
 
     if (blockData) {
       cart.push(blockData);
-      console.log(blockData.price);
     }
   }
 });

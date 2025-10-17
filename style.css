@@ -103,14 +103,6 @@ p {
     border-radius: 12px;
 }
 
-.footer {
-    padding: 10px;
-    position: fixed;
-    text-align: right;
-    bottom: 0;
-    width: 100%;
-}
-
 .add-to-cart {
     background-color: #ff9f43; 
     color: white;
@@ -127,4 +119,12 @@ p {
 .add-to-cart:hover {
     background-color: #ff7a00;
     transform: scale(1.05);
+}
+
+.shoppingcart {
+    text-align: center;
+    background-color: rgb(236, 220, 193);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
