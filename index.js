@@ -121,6 +121,14 @@ document.addEventListener("click", function (click) {
 
     if (blockData) {
       cart.push(blockData);
-    }
+      document.querySelector(".cart-items").insertAdjacentHTML(
+        "afterbegin", `
+        <p>${blockData.name}</p>
+        `);}
+    
+    document.querySelector(".total-price").insertAdjacentHTML(
+      "afterbegin", `
+      <h3>Total Price: ${cart.reduce((total, block) => total + block.price, 0)} Emerald</h3>
+      `);
   }
 });
