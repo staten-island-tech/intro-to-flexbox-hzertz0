@@ -113,7 +113,7 @@ blocks.forEach((block) => {
 });
 
 const cart = [];
-let total = 0
+let total = 0;
 document.addEventListener("click", function (click) {
   if (click.target.classList.contains("add-to-cart")) {
     const cartName = click.target.dataset.name;
@@ -122,15 +122,16 @@ document.addEventListener("click", function (click) {
     if (blockData) {
       cart.push(blockData);
       document.querySelector(".cart-items").insertAdjacentHTML(
-        "afterbegin", `
+        "afterbegin",
+        `
         <p>${blockData.name}</p>
-        `);}
-    
-    document.querySelector(".total-price").insertAdjacentHTML(
-      "afterbegin", `
-      <h3>${
-        total = total + blockData.price
-      }</h3>
-      `);
+        `
+      );
+    }
+
+    total += blockData.price;
+    document.querySelector(".total-price").innerHTML = `<h3>$${total}</h3>`;
   }
 });
+
+document.addEventListener("click", function (click) {});
