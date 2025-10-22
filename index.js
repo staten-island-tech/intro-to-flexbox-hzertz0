@@ -1,5 +1,47 @@
 const blocks = [
   {
+    name: "Crying Obsidian",
+    amount: 2,
+    image: "Assets/cryingobby.png",
+    price: 1,
+    type: "Nether",
+  },
+  {
+    name: "Soul Sand",
+    amount: 4,
+    image: "Assets/soulsand.png",
+    price: 1,
+    type: "Nether",
+  },
+  {
+    name: "Soul Soil",
+    amount: 4,
+    image: "Assets/soulsoil.png",
+    price: 1,
+    type: "Nether",
+  },
+  {
+    name: "Block of Redstone",
+    amount: 1,
+    image: "Assets/redstone.png",
+    price: 2,
+    type: "Craftable",
+  },
+  {
+    name: "Ancient Debris",
+    amount: 1,
+    image: "Assets/ancientdebris.png",
+    price: 4,
+    type: "Nether",
+  },
+  {
+    name: "Nether Quartz",
+    amount: 1,
+    image: "Assets/quartzblock.png",
+    price: 2,
+    type: "Nether",
+  },
+  {
     name: "Bedrock",
     amount: 1,
     image: "Assets/bedrock.png",
@@ -14,10 +56,24 @@ const blocks = [
     type: "Craftable",
   },
   {
+    name: "Netherite Block",
+    amount: 1,
+    image: "Assets/netherite.png",
+    price: 8,
+    type: "Craftable",
+  },
+  {
     name: "Diamond Block",
     amount: 1,
     image: "Assets/diamondblock.png",
     price: 4,
+    type: "Craftable",
+  },
+  {
+    name: "Iron Block",
+    amount: 1,
+    image: "Assets/ironblock.png",
+    price: 2,
     type: "Craftable",
   },
   {
@@ -130,7 +186,9 @@ document.addEventListener("click", function (click) {
     }
 
     total += blockData.price;
-    document.querySelector(".total-price").innerHTML = `<h3>$${total}</h3>`;
+    document.querySelector(
+      ".total-price"
+    ).innerHTML = `<h3>${total} Emeralds</h3>`;
   }
 });
 
@@ -146,4 +204,4 @@ function filterByCategory(category) {
   });
 }
 
-filterByCategory("Nether");
+filterByCategory("All")
