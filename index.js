@@ -102,7 +102,7 @@ const blocks = [
 blocks.forEach((block) => {
   document.querySelector(".containerblocks").insertAdjacentHTML(
     "afterbegin",
-    `<div class="card">
+    `<div class="card" data-type="${block.type}">
             <h2>${block.name}</h2>
             <img src="${block.image}" />
             <p>Price: ${block.price} Emerald</p>
@@ -134,4 +134,16 @@ document.addEventListener("click", function (click) {
   }
 });
 
-document.addEventListener("click", function (click) {});
+function filterByCategory(category) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const blockType = card.dataset.type;
+    if (blockType === category || category === "All") {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+filterByCategory("Nether");
