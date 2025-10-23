@@ -192,7 +192,7 @@ document.addEventListener("click", function (click) {
   }
 });
 
-function filterByCategory(category) {
+/*function filterByCategory(category) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     const blockType = card.dataset.type;
@@ -202,6 +202,19 @@ function filterByCategory(category) {
       card.style.display = "none";
     }
   });
-}
+}*/
 
-filterByCategory("All")
+const filter = document.querySelectorAll(".filterbutton")
+filter.forEach((button) =>
+  button.addEventListener("click", function (event) {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      const blockType = card.dataset.type;
+      if (blockType === event.target.textContent || event.target.textContent === "All") {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  })
+);
