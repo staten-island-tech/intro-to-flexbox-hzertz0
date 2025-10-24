@@ -180,7 +180,7 @@ document.addEventListener("click", function (click) {
       document.querySelector(".cart-items").insertAdjacentHTML(
         "afterbegin",
         `
-        <p>${blockData.name}</p>
+        <p>${blockData.amount}x ${blockData.name} - ${blockData.price} Emerald</p>
         `
       );
     }
@@ -191,18 +191,6 @@ document.addEventListener("click", function (click) {
     ).innerHTML = `<h3>${total} Emeralds</h3>`;
   }
 });
-
-/*function filterByCategory(category) {
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
-    const blockType = card.dataset.type;
-    if (blockType === category || category === "All") {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}*/
 
 const filter = document.querySelectorAll(".filterbutton")
 filter.forEach((button) =>
